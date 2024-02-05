@@ -1,4 +1,4 @@
-let x = Math.floor((Math.random() * 10) + 1);
+let x = Math.floor((Math.random() * 100) + 1);
 
 console.log(x);
 
@@ -6,7 +6,7 @@ let number;
 
 while (number != x) {
 
-    number = Number(prompt("Inserisci un num1ro"));
+    number = Number(prompt("Inserisci un numero"));
 
     if (number === x) {
 
