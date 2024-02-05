@@ -1,24 +1,47 @@
-let numbers;
+// Inserisci un numero, se è pari stampa il numero, se è dispari stampa il numero successivo.
 
-let somma = 0;
+let isNumber = false;
 
+let userNumber;
+let risposta = "";
 
-numbers = prompt("Inserisci un numero a 4 cifre");
+do{
+
+    risposta = prompt("Inserisci un numero oppure scrivi 'Esci' ");
+    userNumber = Number(risposta);
     
-if (numbers.length != 4 && !isNaN(numbers)) {
+    if (isNaN(userNumber)) {
+
+        if (risposta == "Esci") {
+
+            isNumber = true;
+
+        } else {
+
+            isNumber = false;
+
+            alert("Il valore aggiunto non è un numero, aggiungi un numero.");
+            
+        }
+
     
-    document.getElementById("totale").innerHTML = ("non è un numero a 4 cifre");
+    } else {
 
-} else {
 
-    for(let i = 0; i < numbers.length; i++ ) {
+        if (userNumber % 2 == 0) {
 
-        somma += +numbers[i];
+            document.getElementById("numero1").innerHTML = userNumber;
+        
+        } else {
+        
+            userNumber += 1;
+        
+            document.getElementById("numero2").innerHTML = userNumber;
+        
+        }
 
-    } 
+    }
 
-}
-
-document.getElementById("totale").innerHTML = somma;
-
+// while (!isNumber)..
+} while (isNumber === false); 
 
